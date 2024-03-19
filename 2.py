@@ -4,9 +4,7 @@ stack = []
 for c in s:
     if c in pairs:
         stack.append(c)
-    elif stack and pairs[stack[-1]] == c:
-        stack.pop()
-    else:
+    elif stack and pairs[stack.pop()] != c:
         print('False')
         break
 else:
